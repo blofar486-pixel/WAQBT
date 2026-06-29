@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WAQBT ADVANCE GENERATOR v4.6</title>
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --card-bg: #161b22;
+            --primary: #00ffcc;
+            --accent: #ff3366;
+            --text-color: #c9d1d9;
+            --border-color: #30363d;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 500px;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0, 255, 204, 0.05);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .header h1 {
+            color: var(--primary);
+            font-size: 24px;
+            margin: 0;
+            text-shadow: 0 0 10px rgba(0, 255, 204, 0.3);
+        }
+
+        .header p {
+            font-size: 12px;
+            color: #8b949e;
+            margin: 5px 0 0 0;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 8px;
+            color: #8b949e;
+        }
+
+        select, input {
+            width: 100%;
+            padding: 12px;
+            background: #21262d;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: #fff;
+            font-size: 15px;
+            outline: none;
+            box-sizing: border-box;
+            transition: border-color 0.3s;
+        }
+
+        select:focus, input:focus {
+            border-color: var(--primary);
+        }
+
+        .btn-fire {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, #00ffcc, #00b3ff);
+            border: none;
+            border-radius: 8px;
+            color: #000;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 255, 204, 0.2);
+            transition: transform 0.2s, opacity 0.2s;
+        }
+
+        .btn-fire:active {
+            transform: scale(0.98);
+        }
+
+        .output-box {
+            margin-top: 25px;
+            background: #0d1117;
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 15px;
+            font-family: 'Courier New', Courier, monospace;
+            white-space: pre-wrap;
+            font-size: 13px;
+            line-height: 1.5;
+            color: #fff;
+            display: none;
+        }
+
+        .btn-copy, .btn-verify {
+            width: 48%;
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 13px;
+            display: none;
+            border: none;
+        }
+
+        .btn-copy {
+            background: #21262d;
+            color: var(--primary);
+            border: 1px solid var(--primary);
+        }
+
+        .btn-verify {
+            background: #21262d;
+            color: var(--accent);
+            border: 1px solid var(--accent);
+            float: right;
+        }
+
+        .button-group {
+            overflow: hidden;
+            margin-bottom: 15px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 25px;
+            font-size: 13px;
+            color: var(--primary);
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>🚀 WAQBT WEB GENERATOR v4.6</h1>
+        <p>🛡️ Engine Matrix: Serverless Static Live Web Sync</p>
+    </div>
+
+    <div class="form-group">
+        <label>📊 Asset Category</label>
+        <select id="assetMode" onchange="toggleAssetSelection()">
+            <option value="SINGLE">Single Specified Asset</option>
+            <option value="MIX">🔀 Multi Mix Pairs</option>
+        </select>
+    </div>
+
+    <div class="form-group" id="pairGroup">
+        <label>💱 Select Trading Pair</label>
+        <select id="tradingPair">
+            <optgroup label="📈 LIVE PAIRS">
+                <option value="EURUSD">EURUSD</option>
+                <option value="GBPUSD">GBPUSD</option>
+                <option value="USDJPY">USDJPY</option>
+                <option value="AUDUSD">AUDUSD</option>
+            </optgroup>
+            <optgroup label="🤖 OTC PAIRS">
+                <option value="EURUSD-OTC">EURUSD-OTC</option>
+                <option value="GBPUSD-OTC">GBPUSD-OTC</option>
+                <option value="USDJPY-OTC">USDJPY-OTC</option>
+                <option value="USDCHF-OTC">USDCHF-OTC</option>
+                <option value="USDBRL-OTC">USDBRL-OTC</option>
+                <option value="USDPKR-OTC">USDPKR-OTC</option>
+            </optgroup>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>⏱️ Expiry Timeframe</label>
+        <select id="timeframe">
+            <option value="5s">5s</option>
+            <option value="15s">15s</option>
+            <option value="3
